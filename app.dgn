@@ -1,0 +1,29 @@
+select "android";
+and = newLinearLayout();
+//and.setPadding(250,600,30,-50);
+and.setOrientation(LinearLayout.VERTICAL)
+and.setGravity(17);
+txt = newTextView();
+txt.setText("Tobithedev \n\t");
+txt.setTextColor(0,0,0);
+txt.setTextSize(30);
+txt.setLayoutParams({ "layout_width": WRAP_CONTENT, "layout_height": WRAP_CONTENT });
+btn = newButton();
+btn.setText("Btn");
+btn.setBackgroundColor(255,255,255);
+btn.setLayoutParams({ "layout_width": WRAP_CONTENT, "layout_height": WRAP_CONTENT });
+btn.setTextColor(0,0,5);
+btn.setTextSize(20);
+
+
+and.addView(txt);
+and.addView(btn);
+
+count = 0;
+
+btn.onClick(func(){
+  txt.setText("I was clicked "+count+" times")
+  count++
+})
+
+showPanel(and)
